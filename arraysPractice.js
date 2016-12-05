@@ -60,6 +60,11 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
+  function evenFinder(nums){
+    return nums.filter((a)=> (a%2 === 0) ? true : false);
+
+    // *********** *****
+  }
 
 
 //Next problem
@@ -70,9 +75,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 //Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
 
 
+function oddFinder(nums){
+  return nums.filter((a)=> (a%2 === 1) ? true : false);
+}
 
-  //Code Here
+//   //Code Here
 
+  function divider(numbersArray){
+    var arr= [];
+      arr[0]= evenFinder(numbersArray);
+      arr[1]= oddFinder(numbersArray);
+    return arr;
+  }
+//
 
 //Next Problem
 
