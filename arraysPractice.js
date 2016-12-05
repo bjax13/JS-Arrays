@@ -161,19 +161,34 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   //Code Here
 
   function removeItem(list, item){
-    if (length || item) {
+    if(!list){
       return [];
     }
-
+    if (!list.length) {
+      return [];
+    }
+    if(!item){
+      return [];
+    }
+    console.log(list.indexOf(item));
     if(list.indexOf(item) >= 0){
-      list.splice(indexOf(item),1)
+      list.splice(list.indexOf(item),1)
       return list;
     }
 
-
+    return list;
   }
 
   function addItem(list,item){
+    if(!list){
+      return [];
+    }
+    if (!list.length) {
+      return [];
+    }
+    if(!item){
+      return [];
+    }
     if (list.indexOf(item) === -1) {
       list.push(item);
     }
