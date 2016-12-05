@@ -102,14 +102,22 @@ var getRandomArbitrary = function() {
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter)
 //to see if that random number is in the array. If it is, return true, if it's not, return false
+console.log(getRandomArbitrary());
 
   //Code Here
   function finder(arr) {
-    if (arr.indexOf(getRandomArbitrary())){
+    if (arr.length === 0){
+      return false;
+    }
+    var random = getRandomArbitrary();
+
+    if (arr.indexOf(random) != -1){
       return true;
+    }else {
+      return false;
     }
 
-    return false;
+
   }
 
   //Code Here
@@ -123,6 +131,9 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
+  function reverse(str){
+    return str.split("").reverse().join();
+  }
 
 
 //Next Problem
@@ -141,10 +152,36 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   and the second is an item to add to your grocery list. In addItem add the item you passed in to
   myGroceryList then return the new, updated grocery list.
 
-  In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
+  In both the removeItem function and the addItem function, you will also need to check for valid aurguments.
+   Specrunner will try to call your functions without passing in valid aurguments.
+   When this happens, you will need to respond by returning an empty array.
 */
 
   //Code Here
+
+  function removeItem(list, item){
+    if (length || item) {
+      return [];
+    }
+
+    if(list.indexOf(item) >= 0){
+      list.splice(indexOf(item),1)
+      return list;
+    }
+
+
+  }
+
+  function addItem(list,item){
+    if (list.indexOf(item) === -1) {
+      list.push(item);
+    }
+    return list;
+  }
+
+
+
+
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -158,6 +195,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
+  function maker(){
+    var array=[];
+
+    for (var i = 0; i < 215; i++) {
+      array.push(i);
+    };
+    return array;
+  }
 
 
 
@@ -169,6 +214,9 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+  function addTen (numbers){
+    return numbers.forEach(function(a){a+=10});
+  }
 
 
 
@@ -190,6 +238,14 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
+  function longer(arr1, arr2){
+    if (arr1.length > arr2.length){
+      return arr1;
+    }else {
+      return arr2;
+    }
+  }
+
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -197,6 +253,22 @@ for(var i = 0; i < num2; i++){
   'both' should return a new array with the matching numbers found in both arr1 and arr2.
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
+
+  // function both(arr1, arr2){
+  //   var array = [];
+  //
+  //   for (var i = 0; i < arr1.length; i++) {
+  //     for (var j = 0; j < arr2.length; i++) {
+  //       if (arr1[i] === arr2[j]) {
+  //         if (array.indexOf(arr1[i]=== -1)) {
+  //           array.push(arr1[i]);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   return array;
+  // }
+
 
   //Code Here
 
@@ -239,11 +311,20 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+  devMountainEmployees.push(tyler);
+  devMountainEmployees.push(cahlan);
+  devMountainEmployees.push(ryan);
+  devMountainEmployees.push(colt);
+
+  console.log(devMountainEmployees.length);
+
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
+
+
 
 
 
@@ -284,8 +365,28 @@ var data = [
 of Data is to have an Array full of objects. */
 
 //Create an empty array called users.
+var users = [];
 
   //Code Here
+
+users.push({
+  name: "Bryan",
+  email: "bjack13@gmail.com",
+  password: "alal;aklsjdf;l1234",
+  userName: "bjax"
+});
+users.push({
+  name: "Jack",
+  email: "bjack12@gmail.com",
+  password: "alal;aklsjdf;l1234",
+  userName: "bjax1"
+});
+users.push({
+  name: "Jackson",
+  email: "bjack1@gmail.com",
+  password: "alal;aklsjdf;l1234",
+  userName: "bjax2"
+});
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -299,6 +400,9 @@ var user1 = {
 };
 
 //Your Code Here
+users.push(user1);
+
+console.log(users);
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
