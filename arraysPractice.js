@@ -180,12 +180,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   }
 
   function addItem(list,item){
-    if(!list){
-      return [];
-    }
-    if (!list.length) {
-      return [];
-    }
+    
     if(!item){
       return [];
     }
