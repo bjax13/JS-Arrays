@@ -277,6 +277,18 @@ for(var i = 0; i < num2; i++){
 
   function both(arr1, arr2){
     var array = [];
+    if(arr1.length === 0 || arr2.length === 0){
+      return array;
+    }
+
+    for (var i = 0; i < arr1.length; i++) {
+      for (var j = 0; j < arr2.length; j++) {
+        if (arr1[i]===arr2[j]) {
+          array.push(arr1[i]);
+
+        }
+      }
+    }
 
 
     return array;
