@@ -132,7 +132,8 @@ var str = 'this is my sentence';
 
   //Code Here
   function reverse(str){
-    return str.split("").reverse().join();
+
+    return str.split("").reverse().join("");
   }
 
 
