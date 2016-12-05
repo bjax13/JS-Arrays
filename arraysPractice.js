@@ -228,7 +228,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
   function addTen (numbers){
-    return numbers.forEach(function(a){a+=10});
+    if(!numbers.length){
+      return numbers;
+    }
+
+    var answer = numbers.map(function(val){
+
+      return Number(val)+10
+    });
+    return answer;
   }
 
 
@@ -267,20 +275,12 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-  // function both(arr1, arr2){
-  //   var array = [];
-  //
-  //   for (var i = 0; i < arr1.length; i++) {
-  //     for (var j = 0; j < arr2.length; i++) {
-  //       if (arr1[i] === arr2[j]) {
-  //         if (array.indexOf(arr1[i]=== -1)) {
-  //           array.push(arr1[i]);
-  //         }
-  //       }
-  //     }
-  //   }
-  //   return array;
-  // }
+  function both(arr1, arr2){
+    var array = [];
+
+
+    return array;
+  }
 
 
   //Code Here
