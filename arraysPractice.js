@@ -445,4 +445,19 @@ Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
 
+
+
+console.log(users[i].email);
+
+
+var removeEmail = 'tylermcginnis33@gmail.com';
+
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].email === removeEmail) {
+      users.splice(i,1);
+      i--;
+    }
+
+  }
+
 //The activity we just did is very much how data works in 'the real world'.
